@@ -1,0 +1,46 @@
+PODS:
+  - deepar_flutter (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+  - hexcolor (0.0.1):
+    - Flutter
+  - open_file (0.0.1):
+    - Flutter
+  - permission_handler_apple (9.0.4):
+    - Flutter
+  - shared_preferences_ios (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - deepar_flutter (from `.symlinks/plugins/deepar_flutter/ios`)
+  - Flutter (from `Flutter`)
+  - hexcolor (from `.symlinks/plugins/hexcolor/ios`)
+  - open_file (from `.symlinks/plugins/open_file/ios`)
+  - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
+  - shared_preferences_ios (from `.symlinks/plugins/shared_preferences_ios/ios`)
+
+EXTERNAL SOURCES:
+  deepar_flutter:
+    :path: ".symlinks/plugins/deepar_flutter/ios"
+  Flutter:
+    :path: Flutter
+  hexcolor:
+    :path: ".symlinks/plugins/hexcolor/ios"
+  open_file:
+    :path: ".symlinks/plugins/open_file/ios"
+  permission_handler_apple:
+    :path: ".symlinks/plugins/permission_handler_apple/ios"
+  shared_preferences_ios:
+    :path: ".symlinks/plugins/shared_preferences_ios/ios"
+
+SPEC CHECKSUMS:
+  deepar_flutter: 1ffd71abf4a00c8df8a6bb2fa1ba784dbb43ede1
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  hexcolor: fdfb9c4258ad96e949c2dbcdf790a62194b8aa89
+  open_file: 02eb5cb6b21264bd3a696876f5afbfb7ca4f4b7d
+  permission_handler_apple: 44366e37eaf29454a1e7b1b7d736c2cceaeb17ce
+  shared_preferences_ios: 548a61f8053b9b8a49ac19c1ffbc8b92c50d68ad
+
+PODFILE CHECKSUM: b234d57340efa4c9fa4b072fef098975dbb533fa
+
+COCOAPODS: 1.11.3

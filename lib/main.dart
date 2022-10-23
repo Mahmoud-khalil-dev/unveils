@@ -1,7 +1,7 @@
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
- import 'package:unveils/presentation/screens/home/home_screen.dart';
+import 'package:unveils/presentation/screens/home/home_screen.dart';
 import 'business_logic/bloc_observer.dart';
 import 'business_logic/global_cubit/global_cubit.dart';
 

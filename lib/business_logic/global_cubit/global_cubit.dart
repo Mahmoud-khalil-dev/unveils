@@ -105,7 +105,7 @@ class GlobalCubit extends Cubit<GlobalState> {
   /// Get previous effect
   String getPrevEffect() {
     emit(LoadingPreviousEffectState());
-    if(effectIndex < effectsList.length){
+    if(effectIndex > effectsList.length){
       effectIndex--;
     }else {effectIndex = effectsList.length-1;}
     emit(SuccessGetPreviousEffectState());
@@ -125,7 +125,7 @@ class GlobalCubit extends Cubit<GlobalState> {
   /// Get previous mask
   String getPrevMask() {
     emit(LoadingPreviousMaskState());
-    if(maskIndex < maskList.length){
+    if(maskIndex > maskList.length){
       maskIndex--;
     }else {maskIndex = maskList.length-1;}
     emit(SuccessGetPreviousMaskState());
@@ -145,7 +145,7 @@ class GlobalCubit extends Cubit<GlobalState> {
   /// Get previous filter
   String getPrevFilter() {
     emit(LoadingPreviousFilterState());
-    if(filterIndex < filterList.length){
+    if(filterIndex > filterList.length){
       filterIndex--;
     }else {filterIndex = filterList.length-1;}
     emit(SuccessGetPreviousFilterState());

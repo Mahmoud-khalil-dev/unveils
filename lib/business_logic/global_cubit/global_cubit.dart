@@ -5,6 +5,7 @@ import 'package:deepar_flutter/deepar_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:open_file/open_file.dart';
+import '../../constants/license_keys.dart';
 import 'global_state.dart';
 
 class GlobalCubit extends Cubit<GlobalState> {
@@ -20,9 +21,9 @@ class GlobalCubit extends Cubit<GlobalState> {
     dARController
         .initialize(
           androidLicenseKey:
-              "07a3ef99902a416ebac639e0a6cc474751f1c9208a2be7517ba63d0e56f1134d66ce7ea4aa2554b2",
+          androidLicenseKey,
           iosLicenseKey:
-              "910b21de8f8fff0e522c766f17e28609cdf226a01c8329166403836ebe1b5cc2d7e0bfea3626bb32",
+          iosLicenseKey,
           resolution: Resolution.high,
         )
         .then((value) => emit(SuccessConfirmingState()))

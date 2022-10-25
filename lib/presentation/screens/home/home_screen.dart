@@ -9,27 +9,53 @@ import '../../view/top_media_options.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
-  @override
 
+  @override
   Widget build(BuildContext context) {
     var cubit = GlobalCubit.get(context);
 
-    return BlocConsumer<GlobalCubit,GlobalState>(
-
-      listener: ( context, state) {  },
-      builder:(context, state)=> Scaffold(
+    return BlocConsumer<GlobalCubit, GlobalState>(
+      listener: (context, state) {},
+      builder: (context, state) => Scaffold(
         appBar: AppBar(
           title: const Text('DeepAR Flutter Plugin'),
         ),
         body: Stack(
           children: [
-            cubit.dARController.isInitialized
-                ? DeepArPreview(cubit.dARController)
-                : const Center(
-              child: CircularProgressIndicator(),
+            cubit.dARController.isInitialized ?
+            DeepArPreview(cubit.dARController)
+                :
+            const Center(
+                    child: CircularProgressIndicator(),
+                  ),
+
+            Positioned(
+              bottom: 10,
+              right: 0,
+              left: 0,
+              child: ClipOval(
+                clipBehavior: Clip.hardEdge,
+                child: cubit.isEffect ?
+                IconButton(
+                  key: key,
+                  iconSize: 80,
+                  onPressed: () {
+                    cubit.cancelButtonPressed();
+                  },
+                  icon: const Icon(Icons.cancel,color: Colors.red,) )
+                    :
+                IconButton(
+                  iconSize: 80,
+                  onPressed: () {
+                    cubit.effectButtonPressed();
+                  },
+                  icon:Image.asset('assets/mask.jpeg'),
+                ),
+              ),
             ),
-            const TopMediaOptions(),
-            const BottomMediaOptions(),
+
+            // const TopMediaOptions(),
+            // const BottomMediaOptions(),
           ],
         ),
       ),
